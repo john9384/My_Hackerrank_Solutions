@@ -1,31 +1,30 @@
 function repeatedString(s, n) {
-    if (n > 1000000000000) {
-        return null;
-    } else {
-        const s_arr = s.split("")
-        const a_count = s_arr.filter((alph) => alph == "a").length;
-        console.log(a_count)
-        let str = [];
-        // if (s == "a") {
-        //     return n;
-        // } else {
+  //   let str = "";
+  //   let total_no_of_a = 0;
+  //   if (s == "a") {
+  //     return n;
+  //   } else {
+  //     for (let i = 0; i < 10000000000000; i++) {
+  //       if (str.length >= n) {
+  //         let first_n_char = str.substring(0, n);
+  //         total_no_of_a = (first_n_char.match(/a/g) || []).length;
+  //         break;
+  //       } else {
+  //         str = str.concat(s);
+  //         continue;
+  //       }
+  //     }
+  //     return total_no_of_a;
+  //   }
+  s = s.split("");
+  var stringSize = s.length;
+  var a = s.filter((a) => a == "a").length;
 
-        //     let i = 0;
-        //     while (i < n) {
+  var repeat = Math.floor(n / stringSize);
 
-        //         str.push(s)
-        //             // if (str.length > n) {
-        //             //     break;
-        //             // }
-        //         i++
-        //     }
-        return a_count
-            // const sub_str = str.substr(0, n);
-            // const sub_arr = sub_str.split("");
-            // const str_count = sub_arr.filter((alph) => alph == "a").length;
-            // return str_count;
-    }
+  var left = n - repeat * stringSize;
+
+  return repeat * a + s.filter((a, i) => a == "a" && i < left).length;
 }
 
-
-console.log(repeatedString("abc", 10))
+console.log(repeatedString("a", 1000000000));
