@@ -1,20 +1,21 @@
 def minion_game(string):
   vowels = 'AEIOU'
 
-  kevsc = 0
-  stusc = 0
+  kevin = 0
+  stuart = 0
   for i in range(len(string)):
       if string[i] in vowels:
-          kevsc += (len(string)-i)
-          print(kevsc)
+          kevin += (len(string)-i)
       else:
-          stusc += (len(string)-i)
+          stuart += (len(string)-i)
 
-  if kevsc > stusc:
-      print("Kevin", kevsc)
-  elif kevsc < stusc:
-      print("Stuart", stusc)
+  if kevin > stuart:
+      print("Kevin", kevin)
+  elif kevin < stuart:
+      print("Stuart", stuart)
   else:
       print("Draw")
 
-minion_game('BANANA')
+#minion_game('BANANA')
+strings = "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+print(len(strings))
