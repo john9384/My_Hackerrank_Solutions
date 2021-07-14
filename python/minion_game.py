@@ -16,6 +16,4 @@ def minion_game(string):
   else:
       print("Draw")
 
-#minion_game('BANANA')
-strings = "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-print(len(strings))
+minion_game('BANANA')

@@ -7,5 +7,5 @@ def count_substring(string, sub_string):
   
   return count
 
-count_substring("ABCDCDC", 'CDC')
+print(count_substring("ABCDCDC", 'CDC'))
 
